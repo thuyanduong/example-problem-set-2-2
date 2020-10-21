@@ -190,5 +190,5 @@ false.
 
 
 
-Nan  data-type: number was applied because it was easier and safer.Undefined was coerced into 
-a number which result in not a number because undefined is a word.
+NaN  data-type: A number coercion was applied because. Undefined was coerced into 
+a number which result in NaN. Then, adding 5 and NaN resulted in NaN.
