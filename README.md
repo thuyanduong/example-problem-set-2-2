@@ -187,3 +187,8 @@ false.
    ((false || undefined) && 'a' && '');
    ```
      undefined
+
+
+
+Nan  data-type: number was applied because it was easier and safer.Undefined was coerced into 
+a number which result in not a number because undefined is a word.
