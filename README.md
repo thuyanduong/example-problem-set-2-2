@@ -4,12 +4,12 @@
 1. What is _unary operator_? Give an example of one.  
  ``` 
  A unary operator take in an argument and runs the operation.
- example is logical Not(!) it use to represent not in javascript.
+ An example of a unary operator is logical Not(!). It is used to represent not in javascript.
  ```
 2. What is a _binary operator_? Give an example of one.  
  ```
  A binary requires two command on both side and execute the code. 
- example of binary operator is && which is and,the and operator will check
+ An example of a binary operator is && which is AND. The AND operator will check
  if the code on both sides are true.
  ```
 3. When do we use the _ternary operator_? Use a code snippet to illustrate below. 
@@ -118,33 +118,33 @@ false.
 11. Evaluate the following expressions using JavaScripts implicit coercion rules. Then, in one sentence, explain what coercions were applied and why:
   * `8 * null`\
     ```
-    0  data-type: number was applied because null was empty so it timesed 8 and
-    returned 0 as the best guess.
+    0  data-type: A number coercion was applied because null was coerced into 0, so 0 multipled with 8
+    evaluates to 0.
     ```
   * `"5" - 1`\
     ```
-    4  data-type: number was applied because the string 5 was coerced into number 
-    5-1.
+    4  data-type: A number coercion was applied because the string "5" was coerced into the number 5.
+    5 minus 1 is 4.
     ```
   * `"5" + 1`\
     ```
-    "51"  data-type: String was applied because js thinks we are trying to join two strings.
-    So the number 1 was coerced into a string
+    "51"  data-type: A string coersion was applied. JavaScript is trying to join together the two strings.
+    The number 1 was coerced into a string "1".
     ```
   * `true + false`\
     ```
-    1 data-type: number was applied because it was easier 0= false 1= true the boolean
-    were coerced into a number were true is 1 and false is 0.
+    1 data-type: A number coercion was applied. The booleans true and false 
+    were both coerced into a number. False is coerced into 0, true is coerced into 1, and 0 + 1 is 1.
     ```
   * `"i am" + undefined`\
     ```
-    "i amundefined" data-type: string was applied because javascript thnks that the closest possible
-    answer is adding two strings.Undefined was coerced into strings and added with i am.
+    "i amundefined" data-type: A string coercion was applied because javascript thnks that the closest possible
+    answer is adding two strings. Undefined was coerced into strings and added with i am.
     ```
   * `5 + undefined`\
     ```
-    Nan  data-type: number was applied because it was easier and safer.Undefined was coerced into 
-    a number which result in not a number because undefined is a word.
+    Nan  data-type: A number coercion was applied. Undefined was coerced into 
+    a number which resulted in `NaN`. Then, adding 5 and NaN results in NaN.
     ```
 12. What will each line of the following code return?
    ```javascript
