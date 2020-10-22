@@ -1,194 +1,131 @@
 # Problem Set 2.1
 ## Types, Values, and Operators
 
-1. What is _unary operator_? Give an example of one.  
- ``` 
- A unary operator take in an argument and runs the operation.
- An example of a unary operator is logical Not(!). It is used to represent not in javascript.
- ```
-2. What is a _binary operator_? Give an example of one.  
- ```
- A binary requires two command on both side and execute the code. 
- An example of a binary operator is && which is AND. The AND operator will check
- if the code on both sides are true.
- ```
+1. What is _unary operator_? Give an example of one.
+ 
+   An unary operator is a single operand and this operator comes before or after the operator . An example of one is ++.
+
+2. What is a _binary operator_? Give an example of one. 
+
+    Binary operator has different symbols from the unary and has 2 operand one before and one after. An example of one is +.
+
 3. When do we use the _ternary operator_? Use a code snippet to illustrate below. 
-```
-We can use ternary operator when we want to simplify our code instead of using if else statement.  
-  If else:  
-  if (2 > 3) {                         
-      console.log(true)                        
-  } else {\
-      console.log(false) \
-  } \
-      Tenary operator:  2 > 3 ? true : false
-```
-4. What is the difference between using the _strict_ and _non-strict_ equality operators?  
-```     
-Strict equality operator checks the value and the class 
-while non-strict just checks if the value is the same and outputs true
-```
-5. What are the seven JavaScript data types? Which of these are considered _primitive_?  
-```     
-     Primitive:  
-     Undefined  
-     Boolean  
-     Number  
-     String  
-     BigInt  
-     They are called primitive because they can't be directly mutated but they can be replaced.\
-       Symbol 
-```
-6. What does the code below return?  
-  ```javascript
-  typeof 'i love marcy lab';
-  ```
-```
-  String
-```
-7. What does the code below return?  
-  ```javascript
-  typeof true;
-  ```
-```
-  Boolean 
-```
-8. What does the code below return?  
-  ```javascript
-  typeof (10**9);
-  ```
-```
-   Number 
-```
-9. What does the following code return? **Why**?  
-  ```javascript
-  typeof null;
-  ```
-```
-   Object  
-```
-10. What does it mean to be _truthy_ or _falsy_? What six values are _falsy_?  
-```
-Truthy means that it is pretty close to being true. while falsy means that is pretty close to being 
-false.  
-     Falsy:  
-            False	The word false  
-            0	The number zero
-            -0	The number negative zero
-            0n	BigInt, when used as a boolean, follows the same rule as a Number. 0n is falsy.
-            ""	Empty string value
-            null	null - the absence of any value
-            undefined	undefined - the primitive value
-            NaN	NaN - not a number
-```
+
+    We use ternary operator when we want to run a code block based on a condition. (condition) ? result1: result2. The code block would run the first condition if the 1 result1 comes out flasy it run will run the 2nd code. 
+
+4. What is the difference between using the _strict_ and _non-strict_ equality operators? 
+
+    The difference between strict and non-strict is that strict compare data type as well as value and non-strict ignore data type but they must have matching numbers. 
+
+
+5. What are the seven JavaScript data types? Which of these are considered _primitive_? 
+    The seven javaScript data types are number,string,boolean,undefined,null,object and symbol.
+
+
 6. What does the code below return?
+    
+    The code below return a string.
   ```javascript
   typeof 'i love marcy lab';
   ```
-  String\
+
 7. What does the code below return?
+
+    The code below return boolean.
   ```javascript
   typeof true;
   ```
-  Boolean\
+
 8. What does the code below return?
+
+    The code below return number.
+
   ```javascript
   typeof (10**9);
   ```
-   Number\
+
 9. What does the following code return? **Why**?
   ```javascript
   typeof null;
   ```
-   Object\
-10. What does it mean to be _truthy_ or _falsy_? What six values are _falsy_?  
-      ```
-      Truthy means that it is pretty close to being true. 
-      while falsy means that is pretty close to being false.
-      Falsy:
-          False	The word false
-          0	The number zero
-          -0	The number negative zero
-          0n	BigInt, when used as a boolean, follows the same rule as a Number. 0n is falsy.
-          ""	Empty string value
-          null	null - the absence of any value
-          undefined	undefined - the primitive value
-          NaN	NaN - not a number
-      ```
-11. Evaluate the following expressions using JavaScripts implicit coercion rules. Then, in one sentence, explain what coercions were applied and why:
-  * `8 * null`\
-    ```
-    0  data-type: A number coercion was applied because null was coerced into 0, so 0 multipled with 8
-    evaluates to 0.
-    ```
-  * `"5" - 1`\
-    ```
-    4  data-type: A number coercion was applied because the string "5" was coerced into the number 5.
-    5 minus 1 is 4.
-    ```
-  * `"5" + 1`\
-    ```
-    "51"  data-type: A string coersion was applied. JavaScript is trying to join together the two strings.
-    The number 1 was coerced into a string "1".
-    ```
-  * `true + false`\
-    ```
-    1 data-type: A number coercion was applied. The booleans true and false 
-    were both coerced into a number. False is coerced into 0, true is coerced into 1, and 0 + 1 is 1.
-    ```
-  * `"i am" + undefined`\
-    ```
-    "i amundefined" data-type: A string coercion was applied because javascript thnks that the closest possible
-    answer is adding two strings. Undefined was coerced into strings and added with i am.
-    ```
-  * `5 + undefined`\
-    ```
-    Nan  data-type: A number coercion was applied. Undefined was coerced into 
-    a number which resulted in `NaN`. Then, adding 5 and NaN results in NaN.
-    ```
+
+10. What does it mean to be _truthy_ or _falsy_? What six values are _falsy_?
+
+    Truthy means that the value of the code is true and falsy means that the value of the code is false. Six values of falsy is null,0,NaN,undefined, empty string and false.
+
+
+11. Evaluate the following expressions using JavaScripts implicit coercion rules. Then, in one sentence, explain what coercions were applied and why: 
+
+    
+    
+  * `8 * null`
+  * JavaScript can't reslove the operator so it performs type coercion because null is not a number there by it converts it to 0, than it muitply 8 by 0 and gets 0. 
+
+  * `"5" - 1` 
+   * javaScript can't handle string values so it's gonna convert the string into a number using type coercion. 
+  
+  * `"5" + 1`
+    * the only operator javaScript can handle on strings is the addition operator and perform type coercion on the 1 than it concates on to a string.
+  
+  * `true + false` 
+    * becuase javaScript can not handle the addition of two booleans it performs type coercion on them which true results to 1 and false results into 0 then you could combine the two. 
+  
+  * `"i am" + undefined` 
+     the only operator javaScript can handle on strings is the addition operator and perform type coercion on the undefined than it concates on to a string.
+    
+  * `5 + undefined`
+   * javaScript tries to perform type coercion on undefined but it results in NaN and when javaScript performs addition on a number and NaN it becomes NaN.
+ 
+
+
 12. What will each line of the following code return?
    ```javascript
-   (false && undefined);
+   (false && undefined); 
+   
+    false
    ```
-    False
+
    ```javascript
-   (false || undefined);
+   (false || undefined); 
+   
+    undefined
    ```
-     undefined
+
    ```javascript
-   ((false && undefined) || (false || undefined));
+   ((false && undefined) || (false || undefined)); 
+    undefined
    ```
-     undefined
+
    ```javascript
-   ((false || undefined) || (false && undefined));
+   ((false || undefined) || (false && undefined)); 
+    false
    ```
-      False
+
    ```javascript
-   ((false && undefined) && (false || undefined));
+   ((false && undefined) && (false || undefined)); 
+    false
    ```
-      False
+
    ```javascript
-   ((false || undefined) && (false && undefined));
+   ((false || undefined) && (false && undefined)); 
+    undefined 
    ```
-      undefined
+
    ```javascript
    ('a' || (false && undefined) || '');
-   ```
-      "a"
+   ``` 
+    "a"
+
    ```javascript
    ((false && undefined) || 'a' || '');
-   ```
-      "a"
+    "a"
+
    ```javascript
-   ('a' && (false || undefined) && '');
+   ('a' && (false || undefined) && ''); 
+   "undefined"
    ```
-     undefined
+
    ```javascript
-   ((false || undefined) && 'a' && '');
+   ((false || undefined) && 'a' && ''); 
+   "undefined"
    ```
-     undefined
-
-
-
-NaN  data-type: A number coercion was applied because. Undefined was coerced into 
-a number which result in NaN. Then, adding 5 and NaN resulted in NaN.
