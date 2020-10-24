@@ -40,6 +40,8 @@
    console.log(scream);
    ```
    On line 1, the variable greet is declared and initialized to a value of "hello". On line 2, we invoke a function toUpperCase to create a new uppercase string, but that data is never stored. The original string cannot be mutated (cannot change). On line 3, the variable scream is declared and initialized to the value stored in greet which is still the string "hello". When we console.log scream, we see "hello".
+
+To make the code work, we should change line 3 to: let scream = greet.toUpperCase().
    
 
 5. **What does the following log? Explain why, ensuring to explain how `someName` and `busy` were declared?**
