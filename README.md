@@ -30,7 +30,7 @@
    score = 100;
    console.log(score, newScore); 
    ``` 
-   The following code would log 100 90. On line 1, the variable score is declared and initialized to a value of 90. One line 2, the variable newScore is declared and also initialized to the value of score, which is 90. On line 3, score is reassigned to a value of 100, while newScore is unchanged.
+   The following code would log 100 90. On line 1, the variable score is declared and initialized to a value of 90. One line 2, the variable newScore is declared and also initialized to the value of score, which is 90. On line 3, score is reassigned to a value of 100, while newScore is not changed.
 
 4. **Why doesn't the following code log an uppercase string? Change the code so that it does.**
    ```javascript
