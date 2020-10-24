@@ -1,131 +1,70 @@
-# Problem Set 2.1
-## Types, Values, and Operators
+# Problem Set 2.2 - Variables and Control Flow
+## Short Response Questions
 
-1. What is _unary operator_? Give an example of one.
- 
-   An unary operator is a single operand and this operator comes before or after the operator . An example of one is ++.
-
-2. What is a _binary operator_? Give an example of one. 
-
-    Binary operator has different symbols from the unary and has 2 operand one before and one after. An example of one is +.
-
-3. When do we use the _ternary operator_? Use a code snippet to illustrate below. 
-
-    We use ternary operator when we want to run a code block based on a condition. (condition) ? result1: result2. The code block would evaluate to the first result1 if the condition is true. If it comes out falsy it run will evaluate to result2. 
-
-4. What is the difference between using the _strict_ and _non-strict_ equality operators? 
-
-    The difference between strict and non-strict is that strict compare data type as well as value and non-strict ignore data type but they must have matching numbers. 
-
-
-5. What are the seven JavaScript data types? Which of these are considered _primitive_? 
-    The seven javaScript data types are number,string,boolean,undefined,null,object and symbol.
-
-
-6. What does the code below return?
-    
-    The code below return a string.
-  ```javascript
-  typeof 'i love marcy lab';
-  ```
-
-7. What does the code below return?
-
-    The code below return boolean.
-  ```javascript
-  typeof true;
-  ```
-
-8. What does the code below return?
-
-    The code below return number.
-
-  ```javascript
-  typeof (10**9);
-  ```
-
-9. What does the following code return? **Why**?
-  ```javascript
-  typeof null;
-  ```
-
-10. What does it mean to be _truthy_ or _falsy_? What six values are _falsy_?
-
-    Truthy means that the value of the code is true and falsy means that the value of the code is false. Six values of falsy is null,0,NaN,undefined, empty string and false.
-
-
-11. Evaluate the following expressions using JavaScripts implicit coercion rules. Then, in one sentence, explain what coercions were applied and why: 
-
-    
-    
-  * `8 * null`
-  * JavaScript can't reslove the operatoion so it performs type coercion on null. Because null is not a number, it converts it to 0, then it muitply 8 by 0 and gets 0. 
-
-  * `"5" - 1` 
-   * JavaScript can't handle string values with numbers, so it's going to convert the string into a number using type coercion, and then subtracts the number 1 from 5 to get 4. 
-  
-  * `"5" + 1`
-    * JavaScript can operate on strings using the addition operator. It performs type coercion on the 1 by coercing it to a string, then concatenates the two strings together to make "51".
-  
-  * `true + false` 
-    * Because JavaScript can not handle the addition of two booleans, it performs type coercion on them. True is cocerced into 1 and false is coerced into 0, then you add the two numbers to get 1 + 0 = 1. 
-  
-  * `"i am" + undefined` 
-     JavaScript can operate on strings using the addition operator. It performs type coercion on the undefined by coercing it to a string, and then it concates the two strings together.
-    
-  * `5 + undefined`
-   * JavaScript tries to coerce undefined into becoming a number, but it results in NaN. When JavaScript performs addition on a number and NaN it becomes NaN.
- 
-
-
-12. What will each line of the following code return?
+1. **What does the code below log? Why?**
    ```javascript
-   (false && undefined); 
-   
-    false
+   {
+      let singer = 'Omar Apollo';
+   }
+
+   console.log(`My favorite singer is ${singer}`); 
    ```
+       The code below would log error because Omar Apollo was declared inside a block and cannot be accessed from outside the block
 
+2. **What happens when we run the following code? Why?**
    ```javascript
-   (false || undefined); 
-   
-    undefined
+   const favorite = 'Juan Pablo';
+   console.log(`Our favorite Marcy Lab family member is ${favorite}!`); 
+      
+
+   favorite = 'Maya';
+   console.log(`Actually, ${favorite} is my favorite.`); 
    ```
+      When we run the following code Juan Pablo would be the marcy lab favorite family member because it is declared to be Juan Pablo. 
+     When you resign a value to constant it would come out as an error because we assign primitive value to a constant, we cannot change the primitive value.
 
+3. **What does the following code log? Why?**
    ```javascript
-   ((false && undefined) || (false || undefined)); 
-    undefined
-   ```
-
-   ```javascript
-   ((false || undefined) || (false && undefined)); 
-    false
-   ```
-
-   ```javascript
-   ((false && undefined) && (false || undefined)); 
-    false
-   ```
-
-   ```javascript
-   ((false || undefined) && (false && undefined)); 
-    undefined 
-   ```
-
-   ```javascript
-   ('a' || (false && undefined) || '');
+   let score = 90;
+   let newScore = score;
+   score = 100;
+   console.log(score, newScore); 
    ``` 
-    "a"
+   The following code would log 100 90. On line 1, the variable score is declared and initialized to a value of 90. One line 2, the variable newScore is declared and also initialized to the value of score, which is 90. On line 3, score is reassigned to a value of 100, while newScore is unchanged.
 
+4. **Why doesn't the following code log an uppercase string? Change the code so that it does.**
    ```javascript
-   ((false && undefined) || 'a' || '');
-    "a"
-
-   ```javascript
-   ('a' && (false || undefined) && ''); 
-   "undefined"
+   let greet = 'hello';
+   greet.toUpperCase();
+   let scream = greet;
+   console.log(scream);
    ```
+   On line 1, the variable greet is declared and initialized to a value of "hello". On line 2, we invoke a function toUpperCase to create a new uppercase string, but that data is never stored. The original string cannot be mutated (cannot change). On line 3, the variable scream is declared and initialized to the value stored in greet which is still the string "hello". When we console.log scream, we see "hello".
+   
 
+5. **What does the following log? Explain why, ensuring to explain how `someName` and `busy` were declared?**
    ```javascript
-   ((false || undefined) && 'a' && ''); 
-   "undefined"
+   let name;
+   let nickname = 'ghost';
+   let someName = name || nickname;
+   let children = null;
+   let homework = 'lots';
+   let busy = children && homework;
+
+   someName ? console.log(`${someName} evaluates to true`) : console.log(`${someName} evaluates to false.`); 
+   busy ? console.log(`${busy} evaluates to true`) : console.log(`${busy} evaluates to false.`);
    ```
+      someName is assigned nickname because it was the first truthy value in the or operator. So someName becomes ghost.
+      busy is assigned children because it was the first falsey value in the operator. So busy becomes null.
+
+6. **The following code causes an infinite loop. Why?**
+   ```javascript
+   let counter = 0;
+
+   while (counter <= 5) {
+     counter = 1;
+     console.log(`count: ${counter}`);
+     counter += 1;
+   } 
+   ```
+      The code causes a infinite loop because counter is set to 1 and there is no way counter would be greater than 5 because it keeps on getting push to 1.
